@@ -15,8 +15,32 @@ After the installation, this package needs to be loaded:
 
 `library("examNord", lib.loc="<local_library_location>")`
 
-
-
 When creating a new Rmarkdown, choose an option *"From Template"* and select the one with name *"Exam tasks at Nord University"*.
 
 If package `"examNord"` is loaded, but there is no mentioned template in the list, restart R session.
+
+# More on usage
+
+Currently, the template loads a minimum of packages to ensure work mostly with text. If some extra \LaTeX packages are needed, add them into a `custom.tex` file. The next packages will be loaded anyway:
+
+* `\usepackage{lmodern}`
+
+* `\usepackage{amssymb,amsmath}`
+
+* `\usepackage{ifxetex,ifluatex}` 
+
+* `\usepackage{fixltx2e}` % provides \textsubscript
+
+* `\usepackage{geometry}`
+
+* `\usepackage{hyperref}`
+
+* `\urlstyle{same}`  % don't use monospace font for urls
+
+* `\usepackage{graphicx,grffile}`
+
+* `\usepackage{titling}`
+* `\usepackage{xunicode}`
+* `\usepackage{xltxtra}`
+* `\usepackage{fancyhdr}`
+* `\usepackage{titlesec}`
