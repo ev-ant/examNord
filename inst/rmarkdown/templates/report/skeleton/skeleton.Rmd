@@ -6,7 +6,6 @@ output:
   pdf_document:
     includes:
       in_header: examNord.sty
-    keep_tex: yes
     latex_engine: xelatex
 documentclass: article
 fontsize: 12pt
