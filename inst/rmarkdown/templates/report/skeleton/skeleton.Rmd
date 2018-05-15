@@ -5,7 +5,7 @@ date: "Exam_date"
 output: 
   pdf_document:
     includes:
-      in_header: examNord.sty
+      in_header: ['examNord.sty','custom.tex']
     latex_engine: xelatex
 documentclass: article
 fontsize: 12pt
