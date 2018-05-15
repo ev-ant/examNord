@@ -1,6 +1,6 @@
 Package: examNord
 Title: Nord University template for creating exam tasks
-Version: 0.0.1.0
+Version: 0.0.1
 Authors@R: person("Yevheniia", "Antoniuk", email = "yevhenliia.antoniuk@nord.no", role = c("aut", "cre"))
 Description: Package contains a template for producing tasks for exam in format, which is required by Nord University. Default values are oriented on a written exam from Business School.
 Depends: R (>= 3.3)
