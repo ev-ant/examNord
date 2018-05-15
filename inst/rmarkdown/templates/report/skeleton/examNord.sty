@@ -1,0 +1,82 @@
+\ProvidesPackage{examNord}
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+%\usepackage{fontspec}
+%\defaultfontfeatures{Mapping=tex-text}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\setmainfont{Calibri}
+
+\usepackage{fancyhdr}
+
+\fancypagestyle{main}{%\fancyhf
+\fancyhead[R]{Page \textbf{\thepage} of \textbf{\pageref{LastP}}}
+\fancyhead[L]{\includegraphics[width=4cm]{nordlogoen}}
+\fancyfoot[C]{\iffloatpage{}}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{45pt}
+}
+
+\fancypagestyle{append}{%\fancyhf
+\fancyhead[R]{Page \textbf{\thepage}}
+\fancyhead[C]{\large\bfseries\MakeUppercase{Attachments}}
+\fancyhead[L]{\includegraphics[width=4cm]{nordlogoen}}
+\fancyfoot[C]{\iffloatpage{}}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{45pt}
+}
+\AtBeginDocument{\let\maketitle\relax}
+
+\renewcommand{\thesubsection}{\Alph{subsection}}
+
+\makeatletter\let\Title\@title\makeatother
+\makeatletter\let\Author\@author\makeatother
+\makeatletter\let\Date\@date\makeatother
+
+\def\Fac{Business School}
+\newcommand{\Faculty}[1]{\renewcommand{\Fac}{#1}}
+
+\def\clocktime{0900-1300}
+\newcommand{\Time}[1]{\renewcommand{\clocktime}{#1}}
+
+\def\GrDeadline{}
+\newcommand{\GradingDeadline}[1]{\renewcommand{\GrDeadline}{#1}}
+
+\def\Typeexm{SchoolExam}
+\newcommand{\exType}[1]{\renewcommand{\Typeexm}{#1}}
+
+\def\Grounds{Students may demand grounds for the assessment of their examination performance. The deadline is one week after the announcement of the original result.}
+
+\def\Cheating{Cheating or an attempt to cheat may lead to annulment and suspension, cf. regulations relating to studies and examination section 9.1.}
+
+\def\Grads{A-F}
+\newcommand{\Grading}[1]{\renewcommand{\Grads}{#1}}
+
+\def\aids{Pen, ruler, simple calculator and up to two bilingual dictionaries.}
+\newcommand{\AllowedAids}[1]{\renewcommand{\aids}{#1}}
+
+\def\numAtt{-}
+\newcommand{\NumberAttach}[1]{\renewcommand{\numAtt}{#1}}
+
+\def\listAtt{}
+\def\ListAtt{}
+\def\ListAttach[#1]{%
+    \renewcommand{\listAtt}{#1}
+    \renewcommand{\ListAtt}{\textbf{Attachments:} & \listAtt\\}
+}
+
+
+\def\noAttachment{\label{LastP}}
+
+
+\usepackage{titlesec}
+\titleformat{\section}[hang]{}{\large\bfseries\MakeUppercase{Task}\ \thesection\ }{0pt}{}[]
+\titleformat{\subsection}[hang]{}{\large\bfseries\MakeUppercase{Attachment}\ \thesubsection\ }{0pt}{\normalfont}[]
+
+
+\newcommand{\Attachment}{%
+\label{LastP}
+\newpage
+\setcounter{page}{1}
+\pagestyle{append}
+%\hskip3pt\large\bfseries\MakeUppercase{Attachments}%
+}

@@ -1,0 +1,55 @@
+---
+title: "Course_code_and_name"
+author: "Teacher"
+date: "Exam_date"
+output: 
+  pdf_document:
+    includes:
+      in_header: examNord.sty
+    keep_tex: yes
+    latex_engine: xelatex
+documentclass: article
+fontsize: 12pt
+geometry: margin=2cm, a4paper
+subparagraph: yes
+numbersections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<!-- Change if it is not school exam or at different faculty-->
+<!-- \exType{}  -->
+<!-- \Faculty{}  -->
+
+<!-- time for exam, by default 4 hours -- 0900-1300 -->
+<!-- \Time{}   -->
+
+<!-- deadline for grading three weeks after exam date -->
+\GradingDeadline{30 June 2018} 
+
+<!-- grading scale. Default -- A-F --> 
+<!-- \Grading{} -->
+<!-- Allowed Aids: by default--  Pen, ruler, simple calculator and up to two bilingual dictionaries. --> 
+<!-- \AllowedAids{}  -->
+
+<!-- If there are attachments, specify the amount. --> 
+<!-- \NumberAttach{3} -->
+<!-- Specify which attachments are included. --> 
+<!-- \ListAttach[] -->
+
+
+\input{frontpage}
+
+<!--  All tasks are set as a section. Use single hashtag or \section{}. Section's name includes extra information about task (% of total grade is suggested) -->
+# (20% of grade)
+
+
+#  
+<!-- comment first and uncomment second if there are Attachments -->
+\noAttachment        
+<!-- \Attachment -->
+
+<!-- Add attachment by using double hashtag or \subsection{} -->
+<!--  Extra name can be inserted into brackets -->
+<!-- ## -->
