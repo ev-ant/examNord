@@ -4,7 +4,7 @@ The usage of template ensures a compliance with requirements as they are in Spri
 
 To use package, it should be installed with. Before installation, download a full folder "examNord" in a location, its full path you know.
 
-# Installation
+## Installation
 
 
 1.  if "examNord" is downloaded in the working directory):
@@ -15,7 +15,7 @@ To use package, it should be installed with. Before installation, download a ful
 
 `devtools::install("<full path>/examNord")`
 
-# To use
+## To use
 
 After the installation, this package needs to be loaded:
 
