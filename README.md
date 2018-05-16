@@ -44,3 +44,6 @@ Currently, the template loads a minimum of packages to ensure work mostly with t
 * `\usepackage{xltxtra}`
 * `\usepackage{fancyhdr}`
 * `\usepackage{titlesec}`
+
+Since the template relies on extra files with specification of style, an update unsures that **only new `.Rmd`** will get updated template.
+An easy solution to use template with updated styling, is to copy `examNord.sty` and `frontpage.tex` to your older folders. 
