@@ -71,6 +71,35 @@
 \usepackage{titlesec}
 \titleformat{\section}[hang]{}{\large\bfseries\MakeUppercase{Task}\ \thesection\ }{0pt}{}[]
 \titleformat{\subsection}[hang]{}{\large\bfseries\MakeUppercase{Attachment}\ \thesubsection\ }{0pt}{\normalfont}[]
+\def\titlepageEn{
+		\begin{tabular}{p{4cm} p{11cm}}
+		\textbf{Faculty:} & \Fac\\
+
+		\textbf{Subject code and subject name:} & \Title\\
+
+		\textbf{Academic responsible:} & \Author\\
+
+		\textbf{Date/time:} & \Date/\clocktime \\
+
+		\textbf{Grading deadline:} & \GrDeadline\\
+
+		\textbf{Allowed aids:} & \aids\\
+
+		\textbf{Grading scale:} & \Grads\\
+
+		\textbf{Grounds:} & \textit{\Grounds}\\
+
+		\textbf{Cheating:} & \textit{\Cheating}\\
+
+		\ListAtt
+
+		\textbf{Number of pages:} & \pageref{LastP}\\
+
+		\textbf{Number of attachments:} & \numAtt\\
+
+
+		\end{tabular}
+        }
 
 
 \def\inNorwegian{
@@ -99,7 +128,34 @@
 \renewcommand{\headrulewidth}{0pt}
 \setlength{\headheight}{45pt}
 }
+\renewcommand{\titlepageEN}{
+		\begin{tabular}{p{4cm} p{11cm}}
+		\textbf{Facultet:} & \Fac\\
 
+		\textbf{Emnekode og emnenavn:} & \Title\\
+
+		\textbf{Emneansvarlig:} & \Author\\
+
+		\textbf{Dato/tid:} & \Date / \clocktime\\
+
+		\textbf{Sensurfrist:} & \GrDeadline\\
+
+		\textbf{Hjelpemidler:} & \aids\\
+
+		\textbf{Karakter:} & \Grads\\
+
+		\textbf{Begrunnelse:} & \textit{\Grounds}\\
+
+		\textbf{Fusk:} & \textit{\Cheating}\\
+
+		\ListAtt
+
+		\textbf{Antall sider:} & \pageref{LastP}\\
+
+		\textbf{Antall vedlegg:} & \numAtt\\
+
+
+		\end{tabular}
 }
 
 
