@@ -73,6 +73,20 @@
 \titleformat{\subsection}[hang]{}{\large\bfseries\MakeUppercase{Attachment}\ \thesubsection\ }{0pt}{\normalfont}[]
 
 
+\def\inNorwegian{
+\titleformat{\section}[hang]{}{\large\bfseries\MakeUppercase{Oppgave}\ \thesection\ }{0pt}{}[]
+\titleformat{\subsection}[hang]{}{\large\bfseries\MakeUppercase{Vedlegg}\ \thesubsection\ }{0pt}{\normalfont}[]
+\def\ListAttach[#1]{%
+    \renewcommand{\listAtt}{#1}
+    \renewcommand{\ListAtt}{\textbf{Vedlegg:} & \listAtt\\}
+}
+\renewcommand{\aids}{Penn, linjal, enkel kalkulator og inntil 2 stk tospråklige ordbøker.}
+\renewcommand{\Cheating}{Fusk eller forsøk på fusk ved eksamen kan medføre annullering av eksamen og utestengning, jf. studie- og eksamensforskriften § 9-1.}
+\renewcommand{\Grounds}{Studenter kan kreve begrunnelse for vurderingen av sine eksamensprestasjoner. Fristen er en uke fra karakteren ble kunngjort.}
+}
+
+
+
 \newcommand{\Attachment}{%
 \label{LastP}
 \newpage
