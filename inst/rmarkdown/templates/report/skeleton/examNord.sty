@@ -41,7 +41,7 @@
 \def\GrDeadline{}
 \newcommand{\GradingDeadline}[1]{\renewcommand{\GrDeadline}{#1}}
 
-\def\Typeexm{SchoolExam}
+\def\Typeexm{School Exam}
 \newcommand{\exType}[1]{\renewcommand{\Typeexm}{#1}}
 
 \def\Grounds{Students may demand grounds for the assessment of their examination performance. The deadline is one week after the announcement of the original result.}
@@ -59,7 +59,7 @@
 
 \def\listAtt{}
 \def\ListAtt{}
-\newcommand\ListAttach[#1]{%
+\def\ListAttach[#1]{%
     \renewcommand{\listAtt}{#1}
     \renewcommand{\ListAtt}{\textbf{Attachments:} & \listAtt\\}
 }
@@ -71,7 +71,7 @@
 \usepackage{titlesec}
 \titleformat{\section}[hang]{}{\large\bfseries\MakeUppercase{Task}\ \thesection\ }{0pt}{}[]
 \titleformat{\subsection}[hang]{}{\large\bfseries\MakeUppercase{Attachment}\ \thesubsection\ }{0pt}{\normalfont}[]
-\def\titlepageEn{
+\def\titlepageEN{
 		\begin{tabular}{p{4cm} p{11cm}}
 		\textbf{Faculty:} & \Fac\\
 
@@ -79,7 +79,7 @@
 
 		\textbf{Academic responsible:} & \Author\\
 
-		\textbf{Date/time:} & \Date/\clocktime \\
+		\textbf{Date/time:} & \Date / \clocktime \\
 
 		\textbf{Grading deadline:} & \GrDeadline\\
 
@@ -105,8 +105,8 @@
 \def\inNorwegian{
 \titleformat{\section}[hang]{}{\large\bfseries\MakeUppercase{Oppgave}\ \thesection\ }{0pt}{}[]
 \titleformat{\subsection}[hang]{}{\large\bfseries\MakeUppercase{Vedlegg}\ \thesubsection\ }{0pt}{\normalfont}[]
-\renewcommand{\ListAttach}[#1]{%
-    \renewcommand{\listAtt}{#1}
+\renewcommand{\ListAttach}[1]{%
+    \renewcommand{\listAtt}{##1}
     \renewcommand{\ListAtt}{\textbf{Vedlegg:} & \listAtt\\}
 }
 \renewcommand{\aids}{Penn, linjal, enkel kalkulator og inntil 2 stk tospråklige ordbøker.}
@@ -114,7 +114,7 @@
 \renewcommand{\Grounds}{Studenter kan kreve begrunnelse for vurderingen av sine eksamensprestasjoner. Fristen er en uke fra karakteren ble kunngjort.}
 \fancypagestyle{main}{%\fancyhf
 \fancyhead[R]{Side \textbf{\thepage} av \textbf{\pageref{LastP}}}
-\fancyhead[L]{\includegraphics[width=4cm]{logo_NORD}}
+\fancyhead[L]{\includegraphics[width=5cm]{logo_NORD}}
 \fancyfoot[C]{\iffloatpage{}}
 \renewcommand{\headrulewidth}{0pt}
 \setlength{\headheight}{45pt}
@@ -123,11 +123,13 @@
 \fancypagestyle{append}{%\fancyhf
 \fancyhead[R]{Side \textbf{\thepage}}
 \fancyhead[C]{\large\bfseries\MakeUppercase{Attachments}}
-\fancyhead[L]{\includegraphics[width=4cm]{logo_NORD}}
+\fancyhead[L]{\includegraphics[width=5cm]{logo_NORD}}
 \fancyfoot[C]{\iffloatpage{}}
 \renewcommand{\headrulewidth}{0pt}
 \setlength{\headheight}{45pt}
 }
+\renewcommand{\Fac}{Handelhøgskolen}
+\renewcommand{\Typeexm}{SkoleEksamen}
 \renewcommand{\titlepageEN}{
 		\begin{tabular}{p{4cm} p{11cm}}
 		\textbf{Facultet:} & \Fac\\
@@ -156,6 +158,7 @@
 
 
 		\end{tabular}
+}
 }
 
 
