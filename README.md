@@ -2,7 +2,7 @@
 This is a package with Rmarkdown template for producing Exam tasks.
 The usage of template ensures a compliance with requirements as they are in Spring 2018.
 
-To use package, it should be installed with. Before installation, download a full folder "examNord" in a location, its full path you know.
+To use package, it should be installed.
 
 ## Installation
 Before usage of this template, you should install this package: 
